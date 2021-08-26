@@ -7,6 +7,19 @@
     </head>
     <body>
         <h1><a href="index.html">백병전</a></h1>
+        <input type="button" value="dark" onclick="
+            var target = document.querySelector('body');
+            if(this.value == 'dark') {
+                this.value = 'light';
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+            }
+            else {
+                this.value = 'dark';
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+            }
+        ">
         <div id="grid">
             <div>
                 <ul>
