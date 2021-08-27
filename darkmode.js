@@ -27,7 +27,7 @@ function DarkmodeHandler(self) {
     var acolor, nextValue, backColor, fontColor, acolor;
     if(self.value == 'dark') {
         nextValue = 'light';
-        backColor = 'black';
+        backColor = 'gray';
         fontColor = 'white';
         acolor = 'powderblue';
     }
