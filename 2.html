@@ -4,22 +4,40 @@
         <title>백병전</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <script>
+            function nightDayHandler(self) {
+                var target = document.querySelector('body');
+                var acolor = '';
+                var nextValue = '';
+                var backColor = '';
+                var fontColor = '';
+                if(self.value == 'dark') {
+                    nextValue = 'light';
+                    backColor = 'black';
+                    fontColor = 'white';
+                    acolor = 'powderblue';
+                }
+                else {
+                    nextValue = 'dark';
+                    backColor = 'white';
+                    fontColor = 'black';
+                    acolor = 'blue';
+                }
+                self.value = nextValue;
+                target.style.backgroundColor = backColor;
+                target.style.color = fontColor;
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length) {
+                    alist[i].style.color = acolor;
+                    i += 1;
+                }
+            }
+        </script>
     </head>
     <body>
         <h1><a href="index.html">백병전</a></h1>
-        <input type="button" value="dark" onclick="
-            var target = document.querySelector('body');
-            if(this.value == 'dark') {
-                this.value = 'light';
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
-            }
-            else {
-                this.value = 'dark';
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
-            }
-        ">
+        <input type="button" value="dark" onclick="nightDayHandler(this)">
         <div id="grid">
             <div>
                 <ul>
