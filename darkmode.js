@@ -1,3 +1,5 @@
+darkgray = "rgb(50, 50, 50)"
+
 var Links = {
     setColor: function(color) {
         // var alist = document.querySelectorAll('a');
@@ -28,7 +30,7 @@ function DarkmodeHandler(self) {
     var acolor, nextValue, backColor, fontColor;
     if(self.value == 'dark') {
         nextValue = 'light';
-        backColor = 'gray';
+        backColor = darkgray;
         fontColor = 'white';
         acolor = 'powderblue';
     }
